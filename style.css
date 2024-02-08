@@ -1,0 +1,303 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: var(--body-bg-color);
+  font-family: 'Quicksand';
+}
+/*
+::-webkit-scrollbar {
+  width: 12px; 
+}
+::-webkit-scrollbar-thumb{
+  background: #31abc4;
+  border-radius: 0px 0px 50px 50px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--body-bg-color); 
+}
+*/
+:root{
+  --body-bg-color: #77d6ee;
+}
+img{
+  width: 300px;
+  height: 300px;
+}
+.MainNavDiv{
+  position: sticky;
+  top: 0;
+  background-color: var(--body-bg-color);
+  border-bottom: 1px solid black;
+  display: flex;
+  color: black;
+  font-family: 'Quicksand', sans-serif; /* Make sure to import the Quicksand font */
+  justify-content: space-between;
+  width: calc(100% - 126px);
+  padding: 14px 64px;
+  z-index: 1;
+  align-items: center;
+  height: 50px;
+
+}
+.TitleCenter{
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+.navRight{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.navRight a{
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: #000000;
+}
+.navRight a:hover{
+  transform: translateY(-4px);
+}
+.menuButton{
+  color: black;
+}
+#menuButton{
+  color: black;
+  font-size: 30px;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+#menuButton:hover{
+  transform: scale(90%);
+}
+
+.images{
+  justify-content: space-between;
+  display: flex;
+}
+.youtubeIMG{
+  height: 150px;
+}
+.instagramIMG{
+  height: 130px;
+  width: 200px;
+}
+.socialMedia img{
+  user-select: none;
+  user-zoom: none;
+}
+.socialMedia{
+  display: flex;
+  justify-content: space-around;
+  cursor: default;
+}
+.socialMediaCard{
+  height: 375px;
+  text-align: center;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: 300ms;
+  background-color: white;
+}
+.socialMediaCard:hover{
+  transform: scale(90%);
+}
+.socialMediaCard:active{
+  transform: scale(110%);
+}
+.endMediaCardLeft{
+  border-radius: 24px 0px 0px 24px;
+}
+.endMediaCardRight{
+  border-radius: 0px 24px 24px 0px;
+}
+.middleMediaCard{
+  border-radius: 24px;
+}
+.centerX{
+  display: flex;
+  justify-content:center;
+}
+.SMintro{
+  text-align: center;
+  padding-bottom: 100px;
+}
+youtube{
+  background: linear-gradient(45deg,  #ff0000 20%, #cc0f0f 40%, #ae1313 60%, #9a2828 80%, 	#710e0e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+instagram{
+  background: linear-gradient(45deg,  #feda75 5%, #fa7e1e 40%, #d62976 50%, #962fbf 60%, 	#4f5bd5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+twitter{
+color: #1da1f2;
+}
+.sideNav{
+  top: 0;
+  width: 272px;
+  position: fixed;
+  left: -700px;
+  z-index: 2;
+  height: 100%;
+  background: #24addb;
+ /* border-radius: 0px 0px 18px 0px; */
+}
+.sideNavShow{
+   animation: sideNavAppearance 0.6s ease forwards; 
+}
+@keyframes sideNavAppearance{
+  from{
+    left: -700px;
+  }
+  to{
+    left: 0px;
+  }
+}
+@keyframes sideNavClose{
+  from{
+    left: 0px;
+  }
+  to{
+    left: -700px;
+  }
+}
+.sideNavLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sideNavLinks a{
+  text-decoration: none;
+  color: black;
+  font-size: 30px; 
+  z-index: 1;
+  display: inline-block;
+}
+.sideNavLinks a:hover{
+  cursor:pointer;
+}
+.linkSection{
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+#closeButton{
+  font-size: 32px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  user-select: none;
+  transition: rotate 0.6s;
+}
+#closeButton:hover{
+  rotate: 180deg;
+}
+.sideNavCloseButton{
+  text-align: right;
+}
+.sideNavClose{
+  animation: sideNavClose 0.6s ease backwards;
+}
+#houseIcon{
+  font-size: 30px;
+  text-align: center;
+  user-select: none;
+}
+.emphasis{
+  text-align: center;
+  padding-top: 60px;
+  font-size: 50px;
+    background: linear-gradient(90.02deg, #ef3550 0.02%,#f48fb1 27.09%,  #7e57c2 51.04%, #2196f3 60.56%, #26c6da 68.99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+/* for smaller sized viewports DO NOT TOUCH*/
+
+/* do not display hyperlinks [a]*/
+@media (max-width: 1024px){
+  .navRight a{
+    display: none;
+  }
+}
+/* Change title size */
+@media (max-width: 752px){
+  .latitle{
+    font-size: 25px;
+  }
+}
+/* Change ratio between content and side nav */
+/* Change title size */
+@media (max-width: 590px){
+  .latitle{
+    font-size: 20px;
+  }
+  .sideNav{
+    width: 230px;
+  }
+}
+/* change social media cards positioning*/
+@media (max-width: 1000px){
+  .socialMedia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .socialMediaCard{
+    margin-bottom: 20px;
+  }
+  .endMediaCardLeft{
+    border-radius: 24px;
+  }
+  .endMediaCardRight{
+    border-radius: 24px;
+  }
+}
+/* Change ratio between content and side nav */
+@media (max-width: 500px){
+  .sideNav{
+    width: 200px;
+  }
+}
+/* iphone 12 view*/
+@media (max-width: 400px){
+  .TitleCenter{
+    right: 50%;
+    top: 50%;
+    position: absolute;
+  }
+  .latitle{
+    white-space: normal;
+    overflow: visible;
+  }
+  .socialMediaCard:active{
+    transform: none;
+  }
+  .socialMediaCard:hover{
+    transform: none;
+  }
+  #closeButton:hover{
+    rotate: 0;
+  }
+}
+/* copy and paste new code to github*/
